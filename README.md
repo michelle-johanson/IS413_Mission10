@@ -74,3 +74,48 @@
    - `git remote add origin https://github.com/your-username/your-repo-name.git`
    - `git branch -M main`
    - `git push -u origin main`
+
+## Starter Files
+
+### `src/App.jsx`
+
+```jsx
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+    </>
+  );
+}
+
+export default App;
+```
+
+### `src/App.css`
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+### `src/index.css`
+
+```css
+:root {
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  font: 18px/145% var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+```
