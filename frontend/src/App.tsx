@@ -1,9 +1,12 @@
 import './App.css';
+import Heading from './components/Heading';
+import BowlerTable from './components/BowlerTable';
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Heading />
+      <BowlerTable />
     </>
   );
 }
