@@ -3,3 +3,73 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Layout */
+.page {
+  padding: 2rem;
+}
+
+/* Header */
+.site-header {
+  background-color: #1a3a5c;
+  color: white;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.site-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-header p {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: white;
+}
+
+thead {
+  background-color: #1a3a5c;
+  color: white;
+}
+
+thead th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: #eef4fb;
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  color: #374151;
+}

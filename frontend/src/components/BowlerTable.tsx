@@ -22,6 +22,8 @@ function BowlerTable() {
     }, []);
 
     return (
+        <div className="page">
+        <div className="table-wrapper">
         <table>
             <thead>
                 <tr>
@@ -48,6 +50,8 @@ function BowlerTable() {
                 ))}
             </tbody>
         </table>
+        </div>
+        </div>
     );
 }
 
