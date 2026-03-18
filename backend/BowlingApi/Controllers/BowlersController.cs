@@ -17,9 +17,10 @@ public class BowlersController : ControllerBase
     public IActionResult GetBowlers()
     {
         var bowlers = _context.Bowlers.FromSqlRaw(@"
-            SELECT b.BowlerFirstName, b.BowlerMiddleInit, b.BowlerLastName,
-                   t.TeamName, b.BowlerAddress, b.BowlerCity,
-                   b.BowlerState, b.BowlerZip, b.BowlerPhoneNumber
+            SELECT b.BowlerFirstName, COALESCE(b.BowlerMiddleInit, '') AS BowlerMiddleInit, b.BowlerLastName,
+                   t.TeamName, COALESCE(b.BowlerAddress, '') AS BowlerAddress, COALESCE(b.BowlerCity, '') AS BowlerCity,
+                   COALESCE(b.BowlerState, '') AS BowlerState, COALESCE(b.BowlerZip, '') AS BowlerZip,
+                   COALESCE(b.BowlerPhoneNumber, '') AS BowlerPhoneNumber
             FROM Bowlers b
             JOIN Teams t ON b.TeamID = t.TeamID
             WHERE t.TeamName IN ('Marlins', 'Sharks')
