@@ -1,4 +1,4 @@
-namespace BowlingApi.Models;
+namespace BowlingApi.Data;
 
 public class Bowler
 {

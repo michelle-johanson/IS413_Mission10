@@ -1,24 +1,16 @@
 import { useEffect, useState } from 'react';
-
-type Bowler = {
-    bowlerFirstName: string;
-    bowlerMiddleInit: string;
-    bowlerLastName: string;
-    teamName: string;
-    bowlerAddress: string;
-    bowlerCity: string;
-    bowlerState: string;
-    bowlerZip: string;
-    bowlerPhoneNumber: string;
-};
+import type { bowler } from "../types/bowler";
 
 function BowlerTable() {
-    const [bowlers, setBowlers] = useState<Bowler[]>([]);
+    const [bowlers, setBowlers] = useState<bowler[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:5203/api/bowlers')
-            .then((res) => res.json())
-            .then((data) => setBowlers(data));
+            const fetchBowler = async () => {
+            const response = await fetch('https://localhost:5000/api/Bowlers')
+            const data = await response.json();
+            setBowlers(data);
+        }
+        fetchBowler();
     }, []);
 
     return (

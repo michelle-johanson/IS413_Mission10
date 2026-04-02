@@ -1,11 +1,10 @@
-using BowlingApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BowlingApi.Data;
 
-public class BowlingContext : DbContext
+public class BowlingDbContext : DbContext
 {
-    public BowlingContext(DbContextOptions<BowlingContext> options) : base(options) { }
+    public BowlingDbContext(DbContextOptions<BowlingDbContext> options) : base(options) { }
     public DbSet<Bowler> Bowlers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

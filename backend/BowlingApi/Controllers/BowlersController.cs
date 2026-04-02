@@ -1,5 +1,5 @@
 using BowlingApi.Data;
-using BowlingApi.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,9 +9,9 @@ namespace BowlingApi.Controllers;
 [Route("api/[controller]")]
 public class BowlersController : ControllerBase
 {
-    private readonly BowlingContext _context;
+    private readonly BowlingDbContext _context;
 
-    public BowlersController(BowlingContext context) => _context = context;
+    public BowlersController(BowlingDbContext context) => _context = context;
 
     [HttpGet]
     public IActionResult GetBowlers()
